@@ -1,4 +1,4 @@
 # Write your code here
 
-Get-AzDisk | Where-Object {!($_.ManagedBy)} | ConvertTo-Json | Out-File ./result.json
+Get-AzDisk -ResourceGroupName 'mate-azure-task-5' | Where-Object {!($_.ManagedBy)} | ConvertTo-Json | Out-File ./result.json
 
